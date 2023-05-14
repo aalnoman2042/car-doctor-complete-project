@@ -9,7 +9,7 @@ const Login = () => {
 
 const handleLogin = event =>{
     event.preventDefault()
-    const form = event.taret;
+    const form = event.target;
    
     const email = form.email.value;
     const password = form.password.value;
@@ -18,6 +18,7 @@ const handleLogin = event =>{
     .then(result => {
         const user = result.user
         console.log(user);
+        form.reset()
     })
     .catch(error => console.log(error))
 }
